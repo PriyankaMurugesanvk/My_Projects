@@ -1,0 +1,26 @@
+body{
+    background-image:url(https://img.freepik.com/premium-photo/group-young-american-football-players-standing-huddle-together-sports_73899-6083.jpg);
+   background-size: cover;
+   background-repeat:no-repeat;
+}
+.one{
+    text-align: center;
+}
+.player{
+    margin-left: 488px;
+   
+}
+
+.email{
+        margin-left: 488px;
+}
+.offense{
+    margin-left: 488px;
+}
+.total{
+    margin-left: 488px;
+}
+.mm{
+    margin-left: 530px;
+}
+

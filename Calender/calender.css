@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(31, 26, 26);
+}
+
+h1 {
+    font-size: 24px;
+    color:rgb(247, 59, 59);
+}
+
+/* Calendar Grid */
+.year-calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Month */
+.month {
+    width: 100%;
+    max-width: 380px;
+    background:black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    background: grey;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+/* Calendar Days */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.day {
+    padding: 10px;
+    border-radius: 5px;
+    background: #fff;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background:red;
+    color: black;
+}
+
+.empty {
+    visibility: hidden;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .year-calendar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .month {
+        width: 100%;
+        max-width: 90%;
+    }
+}
