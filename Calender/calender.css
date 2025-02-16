@@ -2,70 +2,61 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
-    background-color: rgb(31, 26, 26);
+    padding: 0;
+    background-color: #f8f9fa;
 }
 
-h1 {
-    font-size: 24px;
-    color:rgb(247, 59, 59);
-}
-
-/* Calendar Grid */
+/* Year Calendar Container */
 .year-calendar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-/* Individual Month */
-.month {
-    width: 100%;
-    max-width: 380px;
-    background:black;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h2 {
-    background: grey;
-    color: black;
     padding: 10px;
-    border-radius: 5px;
-    margin: 0;
 }
 
-/* Calendar Days */
+/* Month Box */
+.month {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    width: 100%;
+}
+
+/* Month Title */
+.month h2 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Calendar Grid */
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
-    margin-top: 10px;
+    padding: 5px;
 }
 
-.day {
-    padding: 10px;
-    border-radius: 5px;
-    background: #fff;
-    font-weight: bold;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+/* Calendar Days */
+.day, .empty {
+    padding: 8px;
+    font-size: 1rem;
+    background: #f1f1f1;
+    border-radius: 4px;
 }
 
+/* Headers (Sun, Mon, etc.) */
 .header {
-    background:red;
-    color: black;
+    font-weight: bold;
+    background: #007bff;
+    color: white;
 }
 
-.empty {
-    visibility: hidden;
-}
-
-/* Responsive Styles */
+/* 📱 Mobile Responsive */
 @media (max-width: 768px) {
     .year-calendar {
         flex-direction: column;
@@ -73,7 +64,27 @@ h2 {
     }
 
     .month {
-        width: 100%;
-        max-width: 90%;
+        max-width: 95%;
+    }
+
+    .day, .empty {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+
+    .month h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* 📱 Extra Small Screens */
+@media (max-width: 480px) {
+    .day, .empty {
+        font-size: 0.75rem;
+        padding: 5px;
+    }
+
+    .month h2 {
+        font-size: 1.2rem;
     }
 }
