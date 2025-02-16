@@ -8,7 +8,7 @@ body {
     color: #333;
 }
 .top{
-    margin-left: 488px;
+    text-align: center;
 }
 .color{
     color: #ff9800;
@@ -127,10 +127,19 @@ footer {
     }
 
     nav ul {
+        flex-direction: column;
         padding-top: 10px;
     }
 
     nav ul li {
         margin: 5px 0;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 30px 10px;
     }
 }
